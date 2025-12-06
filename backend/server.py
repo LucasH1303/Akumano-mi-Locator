@@ -340,7 +340,7 @@ async def init_database():
             "rarity": "Mítica",
             "power": "Gelo",
             "description": "Permite criar, controlar e se transformar em gelo.",
-            "current_user": null,
+            "current_user": None,
             "previous_users": ["Kuzan (Aokiji)"],
             "price": 3000000000,
             "available": True,
