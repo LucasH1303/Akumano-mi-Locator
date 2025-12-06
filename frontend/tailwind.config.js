@@ -1,82 +1,65 @@
-/** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
-    darkMode: ["class"],
-    content: [
+  darkMode: "class",
+  content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./public/index.html"
+    "./public/index.html",
   ],
   theme: {
-  	extend: {
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		},
-  		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			}
-  		},
-  		keyframes: {
-  			'accordion-down': {
-  				from: {
-  					height: '0'
-  				},
-  				to: {
-  					height: 'var(--radix-accordion-content-height)'
-  				}
-  			},
-  			'accordion-up': {
-  				from: {
-  					height: 'var(--radix-accordion-content-height)'
-  				},
-  				to: {
-  					height: '0'
-  				}
-  			}
-  		},
-  		animation: {
-  			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
-  	}
+    extend: {
+      colors: {
+        background: {
+          primary: "#050b14",
+          secondary: "#0f172a",
+          tertiary: "#1e293b",
+        },
+        text: {
+          primary: "#e2e8f0",
+          secondary: "#94a3b8",
+          muted: "#64748b",
+          accent: "#ffd700",
+        },
+        brand: {
+          gold: "#FFD700",
+          goldDim: "#C5A000",
+          crimson: "#DC143C",
+          ocean: "#0ea5e9",
+          parchment: "#d4c5a3",
+        },
+        rarity: {
+          common: "#94a3b8",
+          rare: "#3b82f6",
+          mythical: "#a855f7",
+          legendary: "#FFD700",
+          unique: "#DC143C",
+        },
+      },
+      fontFamily: {
+        rye: ['Rye', ...fontFamily.serif],
+        cinzel: ['Cinzel', ...fontFamily.serif],
+        manrope: ['Manrope', ...fontFamily.sans],
+        mono: ['Space Mono', ...fontFamily.mono],
+      },
+      backgroundImage: {
+        'gold-rush': 'linear-gradient(135deg, #FFD700 0%, #C5A000 100%)',
+        'deep-sea': 'linear-gradient(to bottom, #050b14, #0f172a)',
+        'wanted-poster': 'linear-gradient(to bottom right, #fef3c7, #d4c5a3)',
+      },
+      animation: {
+        'glow-pulse': 'glow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        'glow-pulse': {
+          '0%, 100%': {
+            boxShadow: '0 0 15px rgba(255, 215, 0, 0.3)',
+          },
+          '50%': {
+            boxShadow: '0 0 30px rgba(255, 215, 0, 0.5)',
+          },
+        },
+      },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };
