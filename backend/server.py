@@ -610,7 +610,7 @@ async def init_database():
             "rarity": "Muito Rara",
             "power": "Fio",
             "description": "Permite criar e manipular fios extremamente afiados e versáteis.",
-            "current_user": null,
+            "current_user": None,
             "previous_users": ["Donquixote Doflamingo"],
             "price": 1500000000,
             "available": True,
