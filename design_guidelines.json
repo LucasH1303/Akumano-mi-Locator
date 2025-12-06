@@ -1,0 +1,134 @@
+{
+  "identity": {
+    "name": "Akuma Finder",
+    "persona": "The Dark Log Pose",
+    "description": "A high-tech encyclopedia disguised as an ancient pirate artifact. It fuses the raw, gritty aesthetic of the Grand Line with the precision of a modern database.",
+    "emotional_tone": "Mysterious, High-Value, Dangerous, Legendary",
+    "design_principles": [
+      "Fusion: Pirate Cartography x Cyberpunk Database",
+      "Immersion: Every interaction feels like unlocking a treasure chest",
+      "Clarity: Data is king, but style is the emperor",
+      "Motion: Everything is alive, like the sea"
+    ]
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Rye, serif",
+      "usage": "Main titles, Hero sections, 'Wanted' poster headers",
+      "weights": ["400", "900"],
+      "fallback": "serif"
+    },
+    "subheadings": {
+      "font_family": "Cinzel, serif",
+      "usage": "Section headers, Rarity labels, Rankings",
+      "weights": ["700"],
+      "fallback": "serif"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "usage": "Descriptions, Stats, Data tables",
+      "weights": ["400", "500", "700"],
+      "fallback": "sans-serif"
+    },
+    "mono": {
+      "font_family": "Space Mono, monospace",
+      "usage": "Prices (Berries), Coordinates, Technical stats",
+      "weights": ["400"],
+      "fallback": "monospace"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "primary": "#050b14",
+        "secondary": "#0f172a",
+        "tertiary": "#1e293b"
+      },
+      "text": {
+        "primary": "#e2e8f0",
+        "secondary": "#94a3b8",
+        "muted": "#64748b",
+        "accent": "#ffd700"
+      },
+      "brand": {
+        "gold": "#FFD700",
+        "gold_dim": "#C5A000",
+        "crimson": "#DC143C",
+        "ocean": "#0ea5e9",
+        "parchment": "#d4c5a3"
+      },
+      "rarity": {
+        "common": "#94a3b8",
+        "rare": "#3b82f6",
+        "mythical": "#a855f7",
+        "legendary": "#FFD700",
+        "unique": "#DC143C"
+      }
+    },
+    "gradients": {
+      "gold_rush": "linear-gradient(135deg, #FFD700 0%, #C5A000 100%)",
+      "deep_sea": "linear-gradient(to bottom, #050b14, #0f172a)",
+      "wanted_poster": "linear-gradient(to bottom right, #fef3c7, #d4c5a3)"
+    }
+  },
+  "layout": {
+    "grid_system": {
+      "base": "grid-cols-4 gap-6",
+      "bento_mode": "Use 'Tetris' grid for marketing/home, 'Control Room' grid for encyclopedia",
+      "container_padding": "p-6 md:p-12 lg:p-24"
+    },
+    "spacing": {
+      "section_gap": "gap-24",
+      "component_gap": "gap-8",
+      "internal_padding": "p-6"
+    },
+    "containers": {
+      "card_style": "border border-[#d4c5a3]/20 bg-[#0f172a]/80 backdrop-blur-md rounded-xl overflow-hidden relative group",
+      "wanted_poster": "bg-[#fef3c7] text-[#2a2a2a] shadow-xl transform rotate-1 hover:rotate-0 transition-all duration-300 border-4 border-[#d4c5a3]"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#FFD700] text-black font-bold uppercase tracking-widest hover:bg-[#C5A000] transition-colors px-8 py-3 rounded-sm clip-path-slant",
+      "secondary": "border border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700]/10 px-8 py-3 rounded-sm uppercase tracking-widest",
+      "ghost": "text-[#94a3b8] hover:text-white hover:underline decoration-[#FFD700] underline-offset-4"
+    },
+    "inputs": {
+      "search_bar": "bg-[#1e293b]/50 border border-[#d4c5a3]/30 text-[#e2e8f0] placeholder:text-[#64748b] focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700] rounded-lg h-12 px-4 w-full transition-all"
+    },
+    "cards": {
+      "fruit_card": "relative overflow-hidden bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-[#334155] hover:border-[#FFD700] transition-all duration-300 group",
+      "wanted_card": "bg-[url('https://images.unsplash.com/photo-1706271952257-bc67d3c2c0e4?crop=entropy&cs=srgb&fm=jpg&q=85')] bg-cover text-[#3f2e18] font-serif p-4 shadow-2xl border-8 border-double border-[#5c4033]"
+    }
+  },
+  "assets": {
+    "textures": {
+      "parchment": "https://images.unsplash.com/photo-1706271952257-bc67d3c2c0e4?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "dark_wood": "https://images.unsplash.com/photo-1618385418700-35dc948cdeec?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "map_overlay": "https://images.unsplash.com/flagged/photo-1567910639374-02b145f45215?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px, Gold or Muted Blue color"
+    },
+    "image_search_instructions": "When searching for fruit images, use specific terms like 'Gomu Gomu no Mi fruit anime', 'Mera Mera no Mi fruit design'. If real images fail, use abstract elemental representations (e.g., 'swirling fire sphere' for Mera Mera)."
+  },
+  "animations": {
+    "libraries": ["framer-motion"],
+    "styles": {
+      "hover_lift": "hover:-translate-y-2 transition-transform duration-300 ease-out",
+      "glow_pulse": "animate-pulse shadow-[0_0_15px_rgba(255,215,0,0.3)]",
+      "page_transition": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}"
+    }
+  },
+  "universal_guidelines": [
+    "Do not use gradients for text unless it's a very large heading.",
+    "Ensure all text on dark backgrounds has sufficient contrast (APCA check).",
+    "Use 'data-testid' on all interactive elements.",
+    "Avoid generic 'Bootstrap' layouts. Use asymmetry.",
+    "Images must be optimized and lazy-loaded.",
+    "For the 'Black Market', use a ticker/marquee effect for prices.",
+    "The 'Wanted' poster style should be used sparingly for high-impact items (Top 10, Rare finds)."
+  ],
+  "instructions_to_main_agent": "1. Install 'lucide-react', 'framer-motion', 'clsx', 'tailwind-merge'. 2. Set up the Tailwind config with the custom colors and fonts defined above. 3. Create a 'Layout' component that wraps the app with the dark theme and texture overlays. 4. Build the 'FruitCard' component first as it is the core UI element. 5. Use the provided texture URLs for backgrounds."
+}
