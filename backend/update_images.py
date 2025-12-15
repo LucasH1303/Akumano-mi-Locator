@@ -22,7 +22,7 @@ fruit_images = {
     "magu-magu": "https://vignette.wikia.nocookie.net/onepiece/images/1/1e/Magu_Magu_no_Mi_Infobox.png/revision/latest?cb=20130319225043",
     "hie-hie": "https://customer-assets.emergentagent.com/job_devil-fruit-db/artifacts/40lnifvw_Hie_Hie_no_Mi.webp",
     "ope-ope": "https://customer-assets.emergentagent.com/job_devil-fruit-db/artifacts/p89k0n3p_Ope_Ope_no_Mi_Infobox.webp",
-    "suna-suna": "https://vignette.wikia.nocookie.net/onepiece/images/b/b6/Suna_Suna_no_Mi_Infobox.png/revision/latest?cb=20130407021330",
+    "suna-suna": "https://i.imgur.com/EsoXsyo.jpeg",
     "goro-goro": "https://vignette.wikia.nocookie.net/onepiece/images/6/6b/Goro_Goro_no_Mi_Infobox.png/revision/latest?cb=20130417030954",
     "mochi-mochi": "https://vignette.wikia.nocookie.net/onepiece/images/0/04/Mochi_Mochi_no_Mi_Infobox.png/revision/latest?cb=20170205150202",
     "hana-hana": "https://vignette.wikia.nocookie.net/onepiece/images/5/57/Hana_Hana_no_Mi_Infobox.png/revision/latest?cb=20130407020855",
