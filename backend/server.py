@@ -90,6 +90,47 @@ async def get_fruit_by_id(fruit_id: str):
         raise HTTPException(status_code=404, detail="Fruta não encontrada")
     return fruit
 
+@api_router.put("/fruits/{fruit_id}", response_model=DevilFruit)
+async def update_fruit(fruit_id: str, fruit_data: DevilFruit):
+    # Verifica se a fruta existe
+    existing_fruit = await db.devil_fruits.find_one({"id": fruit_id}, {"_id": 0})
+    if not existing_fruit:
+        raise HTTPException(status_code=404, detail="Fruta não encontrada")
+    
+    # Atualiza a fruta com os novos dados
+    fruit_dict = fruit_data.model_dump()
+    fruit_dict["id"] = fruit_id  # Garante que o ID não mude
+    
+    await db.devil_fruits.update_one(
+        {"id": fruit_id},
+        {"$set": fruit_dict}
+    )
+    
+    # Retorna a fruta atualizada
+    updated_fruit = await db.devil_fruits.find_one({"id": fruit_id}, {"_id": 0})
+    return updated_fruit
+
+@api_router.patch("/fruits/{fruit_id}")
+async def partial_update_fruit(fruit_id: str, updates: dict):
+    # Verifica se a fruta existe
+    existing_fruit = await db.devil_fruits.find_one({"id": fruit_id}, {"_id": 0})
+    if not existing_fruit:
+        raise HTTPException(status_code=404, detail="Fruta não encontrada")
+    
+    # Remove campos que não devem ser atualizados diretamente
+    updates.pop("id", None)
+    updates.pop("_id", None)
+    
+    # Atualiza apenas os campos fornecidos
+    await db.devil_fruits.update_one(
+        {"id": fruit_id},
+        {"$set": updates}
+    )
+    
+    # Retorna a fruta atualizada
+    updated_fruit = await db.devil_fruits.find_one({"id": fruit_id}, {"_id": 0})
+    return updated_fruit
+
 @api_router.post("/search", response_model=List[DevilFruit])
 async def search_fruits(search: SearchRequest):
     query = {}
