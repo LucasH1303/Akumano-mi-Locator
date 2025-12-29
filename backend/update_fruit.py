@@ -23,16 +23,16 @@ async def update_fruit():
     
     # ID da fruta que você quer atualizar
     # Exemplos de IDs: "gomu-gomu", "mera-mera", "yami-yami", etc.
-    FRUIT_ID = "gomu-gomu"
+    FRUIT_ID = "suna-suna"
     
     # Campos que você quer atualizar
     # IMPORTANTE: Só inclua os campos que você quer modificar!
     updates = {
-        "type": "Zoan",              # Tipo: Paramecia, Logia ou Zoan
-        "price": 10000000000,         # Preço em berries
-        "destructive_power": 100,     # Poder destrutivo (0-100)
-        "defense_rating": 100,        # Defesa (0-100)
-        "speed_rating": 100,          # Velocidade (0-100)
+        "type": "Logia",              # Tipo: Paramecia, Logia ou Zoan
+        "price": 1000000000,         # Preço em berries
+        "destructive_power": 82,     # Poder destrutivo (0-100)
+        "defense_rating": 95,        # Defesa (0-100)
+        "speed_rating": 90,          # Velocidade (0-100)
         # Você pode adicionar mais campos aqui:
         # "rarity": "Única",          # Raridade
         # "current_user": "Nome",     # Usuário atual
