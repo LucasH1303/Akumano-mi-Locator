@@ -44,7 +44,7 @@ const FruitCard = ({ fruit }) => {
             </div>
           </div>
 
-          <div className="aspect-square w-full mb-4 rounded-lg overflow-hidden bg-background-primary/50">
+          <div className="aspect-[3/4] w-full mb-4 rounded-lg overflow-hidden bg-background-primary/50">
             <img
               src={fruit.image_url}
               alt={fruit.name}
