@@ -3,8 +3,8 @@ Script genérico para atualizar qualquer Akuma no Mi
 Use este script como modelo para atualizar outras frutas
 
 COMO USAR:
-1. Modifique a variável FRUIT_ID com o ID da fruta que deseja atualizar
-2. Modifique o dicionário updates com os campos que deseja alterar
+1. Modifique a variável FRUIT_ID com o ID da fruta que deseja atualizar (Pegue o ID da fruta no server.py)
+2. Modifique os campos desejados abaixo, retirando a "#" 
 3. Execute: python update_fruit.py
 """
 import asyncio
@@ -23,22 +23,33 @@ async def update_fruit():
     
     # ID da fruta que você quer atualizar
     # Exemplos de IDs: "gomu-gomu", "mera-mera", "yami-yami", etc.
-    FRUIT_ID = "suna-suna"
+    FRUIT_ID = "gomu-gomu"
     
-    # Campos que você quer atualizar
+    # Campos de atualização atualizar
     # IMPORTANTE: Só inclua os campos que você quer modificar!
     updates = {
-        "type": "Logia",              # Tipo: Paramecia, Logia ou Zoan
-        "price": 1000000000,         # Preço em berries
-        "destructive_power": 82,     # Poder destrutivo (0-100)
-        "defense_rating": 95,        # Defesa (0-100)
-        "speed_rating": 90,          # Velocidade (0-100)
-        # Você pode adicionar mais campos aqui:
-        # "rarity": "Única",          # Raridade
-        # "current_user": "Nome",     # Usuário atual
-        # "available": False,         # Se está disponível
-        # "description": "Nova descrição",
-        # etc.
+        # "name": "Gomu Gomu no Mi",
+        # "japanese_name": "ゴムゴムの実",
+        # "type": "Paramecia",
+        # "rarity": "Única",
+        # "power": "Borracha",
+        # "description": "Transforma o corpo em borracha. Verdadeiro nome: Hito Hito no Mi, Modelo: Nika.",
+        # "current_user": "Monkey D. Luffy",
+        # "previous_users": ["Joy Boy"],
+         "price": 1.000000000 ,
+        # "available": False,
+        # "keywords": ["borracha", "elástico", "esticar", "flexível", "nika"],
+        # "locations": ["East Blue (roubada por Shanks)"],
+        # "lore": "Fruta lendária guardada pelo Governo Mundial por 800 anos. Seu verdadeiro poder é de um deus da libertação.",
+        # "curiosities": [
+            # "O Governo Mundial tentou capturá-la por séculos",
+            # "Despertada, permite transformar o ambiente em borracha e acessar o Gear 5",
+            # "É considerada a fruta mais ridícula do mundo",
+        #], 
+        # "first_appearance": "Capítulo 1, Episódio 4",
+        # "destructive_power": 100,
+        # "defense_rating": 75,
+        # "speed_rating": 92,
     }
     
     # ========================================
