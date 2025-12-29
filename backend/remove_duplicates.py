@@ -66,7 +66,6 @@ async def remove_duplicates():
         print(f"\n📋 Lista de frutas únicas restantes:")
         
         # Lista as frutas por tipo
-        from collections import defaultdict
         by_type = defaultdict(list)
         for fruit in final_fruits:
             # Busca a fruta completa para pegar o tipo
